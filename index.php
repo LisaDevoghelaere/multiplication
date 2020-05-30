@@ -7,14 +7,16 @@
 </head>
 <body>
     <!--Page 1 - Afficher la table de multiplication de 3-->
-    <?php
-    $i=3;
-    Echo 'Table de multiplication de 3<br>';
-    for ($j = 1; $j <= 10; $j++)
-    {
-        echo $i.' x '.$j.' = '.$i*$j.'<br>';
-    }
-
-    ?>
+    <main>
+        <?php
+        $trois=3;
+        Echo 'Table de multiplication de 3<br>';
+        for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+        {
+            echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
+        }
+    
+        ?>
+    </main>
 </body>
 </html>
