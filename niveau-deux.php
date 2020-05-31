@@ -25,5 +25,6 @@
     {
         echo $multiplicande' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
     }
+    ?>
 </body>
 </html>
