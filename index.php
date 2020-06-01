@@ -6,7 +6,19 @@
     <title>Multiplication</title>
 </head>
 <body>
-    <!--Page 1 - Afficher la table de multiplication de 3-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="niveau-deux.php">Niveau 2</a></li>
+                <li><a href="niveau-trois.php">Niveau 3</a></li>
+                <li><a href="niveau-quatre.php">Niveau 4</a></li>
+                <li><a href="niveau-cinq.php">Niveau 5</a></li>
+                <li><a href="niveau-six.php">Niveau 6</a></li>
+                <li><a href="niveau-quatre-bis.php">Niveau 4 Bis</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <?php
         $trois=3;
@@ -18,6 +30,5 @@
     
         ?>
     </main>
-    <!--Penser à créer un menu pour naviguer de page en page !!!!-->
 </body>
 </html>
