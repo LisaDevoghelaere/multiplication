@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Suez+One&display=swap" rel="stylesheet">
     <title>Multiplication</title>
+    <link rel="stylesheet" href="style.scss">
 </head>
 <body>
     <header>
+        <h1>Multiplication</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
@@ -20,15 +23,22 @@
         </nav>
     </header>
     <main>
-        <?php
-        $trois=3;
-        Echo 'Table de multiplication de 3<br>';
-        for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-        {
-            echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
-        }
-    
-        ?>
+        <div>
+            <h2>Révisons un peu nos tables de multiplication !</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
+        </div>
+        <div>
+            <p>
+                <?php
+                $trois=3;
+                Echo 'Table de multiplication de 3<br>';
+                for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                {
+                    echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
+                }    
+                ?>
+            </p>
+        </div>
     </main>
 </body>
 </html>

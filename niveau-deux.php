@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplication Niveau 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Suez+One&display=swap" rel="stylesheet">
+    <title>Multiplication - Niveau 2</title>
+    <link rel="stylesheet" href="style.scss">
 </head>
 <body>
 <header>
-        <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="niveau-deux.php">Niveau 2</a></li>
-                <li><a href="niveau-trois.php">Niveau 3</a></li>
-                <li><a href="niveau-quatre.php">Niveau 4</a></li>
-                <li><a href="niveau-cinq.php">Niveau 5</a></li>
-                <li><a href="niveau-six.php">Niveau 6</a></li>
-                <li><a href="niveau-quatre-bis.php">Niveau 4 Bis</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>Multiplication</h1>
+    <nav>
+        <ul>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="niveau-deux.php">Niveau 2</a></li>
+            <li><a href="niveau-trois.php">Niveau 3</a></li>
+            <li><a href="niveau-quatre.php">Niveau 4</a></li>
+            <li><a href="niveau-cinq.php">Niveau 5</a></li>
+            <li><a href="niveau-six.php">Niveau 6</a></li>
+            <li><a href="niveau-quatre-bis.php">Niveau 4 Bis</a></li>
+        </ul>
+    </nav>
+</header>
 <main>
+<header>
+    <h2>Quelle table veux-tu réviser ?</h2>
+</header>
     <form method="post" name="table_de_multiplication" action="">
-        <label for="table-select">Quelle table veux-tu réviser ?<br></label>
         <select name="multiplication">
             <option value="0">--Choisis un chiffre--</option>
             <option value="1">Table de 1</option>
@@ -37,15 +42,17 @@
         </select>
         <input type="submit" name="valider" value="OK"/>
     </form>
-    <?php
-    if(isset($_POST['multiplication'])){
-        $multiplicande=$_POST['multiplication'];
-            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-            {
-                echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
+    <p>
+        <?php
+        if(isset($_POST['multiplication'])){
+            $multiplicande=$_POST['multiplication'];
+                for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                {
+                    echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
+                }
             }
-        }
-    ?>
+        ?>
+    </p>
 </main>
 </body>
 </html>
