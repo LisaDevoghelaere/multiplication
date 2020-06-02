@@ -31,6 +31,25 @@
         <input type="checkbox" name="chiffre[]" value="5"> Table de 5<br>
         <input type="submit" name="bouton" value="Afficher">
     </form>
+    <?php
+    if(isset($_POST["chiffre"])){
+        for($i=0; $i < count($_POST["chiffre"]));$i++){
+            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                {
+                    echo $_POST["chiffre"][$i].' x '.$multiplicateur.' = '.($_POST["chiffre"[$i]*$multiplicateur).'<br>';
+                }
+        }
+    }
+        
+    ?>
     
 </body>
 </html>
+<!--foreach($chiffre as $multiplicande){
+        $chiffre= (isset($_POST['chiffre'])) ? $_POST['chiffre'] : [];
+        $multiplicande=$_POST['chiffre[]'];
+            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+            {
+                echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
+            }
+        }-->
