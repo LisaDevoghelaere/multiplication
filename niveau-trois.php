@@ -29,27 +29,28 @@
         <input type="checkbox" name="chiffre[]" value="3"> Table de 3<br>
         <input type="checkbox" name="chiffre[]" value="4"> Table de 4<br>
         <input type="checkbox" name="chiffre[]" value="5"> Table de 5<br>
+        <input type="checkbox" name="chiffre[]" value="6"> Table de 6<br>
+        <input type="checkbox" name="chiffre[]" value="7"> Table de 7<br>
+        <input type="checkbox" name="chiffre[]" value="8"> Table de 8<br>
+        <input type="checkbox" name="chiffre[]" value="9"> Table de 9<br>
+        <input type="checkbox" name="chiffre[]" value="10"> Table de 10<br>
         <input type="submit" name="bouton" value="Afficher">
     </form>
     <?php
     if(isset($_POST["chiffre"])){
-        for($i=0; $i < count($_POST["chiffre"]));$i++){
-            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-                {
-                    echo $_POST["chiffre"][$i].' x '.$multiplicateur.' = '.($_POST["chiffre"[$i]*$multiplicateur).'<br>';
-                }
+        for($i=0; $i < count($_POST["chiffre"]);$i++){?>
+            <div>
+                <h3>Table de <?php echo$_POST["chiffre"][$i]; ?></h3>
+                <p><?php
+            for ($j=0; $j<11; $j++){
+                echo$_POST["chiffre"][$i] . "x" .$j. " = ". ($_POST["chiffre"][$i]*$j). "<br/>";
+            }
+            ?></p>
+            </div> 
+            <?php
         }
     }
         
-    ?>
-    
+    ?>    
 </body>
 </html>
-<!--foreach($chiffre as $multiplicande){
-        $chiffre= (isset($_POST['chiffre'])) ? $_POST['chiffre'] : [];
-        $multiplicande=$_POST['chiffre[]'];
-            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-            {
-                echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
-            }
-        }-->
