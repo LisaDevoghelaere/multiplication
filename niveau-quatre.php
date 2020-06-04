@@ -1,3 +1,4 @@
+<?php session_start(); //pour que les *_SESSION marchent. le $_SESSION permet de terenir des infos ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +24,8 @@
         </nav>
     </header>
     <!--mode révision : l'utilisateur choisit une table de multiplication et doit répondre à une multiplication tirée au hasard dans la table sélectionnée. 
-    L'utilisateur choisi un multiplicande et le multiplicateur est choisit par un random de un à 10
-    input pour répondre à la question si la réponse est conforme à i*j "bien joué" sinon "raté, la réponse est : i*j "-->
+    
+    En cas de doute utiliser var_dump pour écouter les variables et savoir ce qu'elles contiennent (un peu comme console.log)-->
     <main>
         <h2>Choisis une table à réviser</h2>
         <p>Sélectionne le chiffre de la table que tu veux réviser et trouve la réponse à la multiplication qui va apparaitre</p>
@@ -46,19 +47,24 @@
         </form>
         <p>Combien font... </p>
         <?php
-        if(isset($_POST['choix'])||isset($_POST["reponse"])){
-            $i = $_POST['choix'];
-            $j=random_int(0,10);
-            echo $i . " x " . $j . " = " . "?";
+       
+        if(isset($_POST['choix'])){ //lis les formulaires
+            $_SESSION['multiplicande'] = $_POST['choix']; //récupération du choix du formulaire pur en faire le multiplicande
+            $_SESSION['random-num']=random_int(0,10); // random pour avoir un multiplicateur
+            echo $_SESSION['multiplicande'] . " x " . $_SESSION['random-num'] . " = " . "?"; //question
+        
         ?>
         <form action="" method="post">
-            <input type="text" name="reponse">
-            <input type="submit" value="Valider">
+            <input type="hidden" name="choix" value="<?php echo $_SESSION['multiplicande'] ?>"> <!--Ici on mets un input caché qui se souvient de la valeur du précédent formulaire -->
+            <input type="text" name="reponse"> <!-- réponse utilisateur-->
+            <input type="submit" value="valider">
         </form>
         <?php
          
             if(isset($_POST['reponse'])){
-                $resultat=$i*$j;
+                
+                $resultat=$_SESSION['multiplicande']*$_SESSION['random-num'];
+                var_dump($resultat);
                 if ($_POST["reponse"]==$resultat){
                 ?>
                         <p>Bravo! Tu as trouvé!</p>
@@ -70,7 +76,7 @@
                     <?php
                     }
             }
-        }
+        }      
         ?>
     </main>
 </body>
