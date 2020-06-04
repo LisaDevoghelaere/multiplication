@@ -1,4 +1,4 @@
-<?php session_start(); //pour que les *_SESSION marchent. le $_SESSION permet de terenir des infos ?>
+<?php session_start(); //pour que les *_SESSION marchent. le $_SESSION permet de retenir des infos ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,32 +27,65 @@
     <main>
         <h2>Super Mode Révision !</h2>
         <p>Répond à 5 questions tirées au hasard ! C'est parti ?</p>
-        <?php
-        for ($question = 1; $question <= 5; $question++)
-        {
-            echo '<h3>Question : ' . $question . "</h3><br>";
-            $_SESSION['number1'] = random_int(1,10);
-            $_SESSION['number2'] = random_int(1,10);
-            echo $_SESSION['number1'] . " X " . $_SESSION['number2'] . " = " . '<form action="" method="post"><input type="text" name="reponse"> '. ' <input type="submit" value="valider"></form>';
-            var_dump($_SESSION['number1']*$_SESSION['number2']);
+        <div>
+            <h3>Question 1</h3>
+            <?php
+                $_SESSION['number1a'] = random_int(1,10);
+                $_SESSION['number1b'] = random_int(1,10);
+                $_SESSION['question1'] = $_SESSION['number1a']*$_SESSION['number1b'];
         
-            if(isset($_POST['reponse'])){
+            ?>
+            <p><?php echo $_SESSION['number1a']; ?> x <?php echo $_SESSION['number1b']; ?> = </p>
+            <form action="" method="post"><input type="text" name="reponse1"></form>
+            <?php var_dump($_SESSION['number1a']*$_SESSION['number1b']);
                
-                $resultat=$_SESSION['number1']*$_SESSION['number2'];
-                if ($_POST["reponse"]==$resultat){
+            ?>
+        </div>
+        <div>
+            <h3>Question 2</h3>
+            <?php
+                $_SESSION['number2a'] = random_int(1,10);
+                $_SESSION['number2b'] = random_int(1,10);
+                $_SESSION['question2'] = $_SESSION['number2a']*$_SESSION['number2b'];
                 
-                ?>
-                        <p>Bravo! Tu as trouvé!</p>
-                    <?php
-                    }
-                else{
-                    ?>
-                        <p>Mauvaise Réponse!</p>
-                    <?php
-                    }
+            ?>
+            <p><?php echo $_SESSION['number2a']; ?> x <?php echo $_SESSION['number2b']; ?> = </p>
+            <form action="" method="post">
+                <input type="text" name="reponse2">
+            </form>
+            <?php var_dump($_SESSION['number2a']*$_SESSION['number2b']); ?>
+        </div>
+        <form action="" method="post">
+            <input type="hidden" name="reponse1">
+            <input type="hidden" name="reponse2">
+            <input type="submit" value="valider mes réponses" name="validation">
+        </form>
+        <?php 
+        if(isset($_POST['validation'])|| isset($_POST['reponse1'])|| isset($_POST['reponse2'])){
+            $_SESSION['reponse-1']=$_POST['reponse1'];
+            $_SESSION['reponse-2']=$_POST['reponse2'];
+            $score=0;
+            echo '<h3>Question 1 : </h3>';
+            if ($_SESSION['reponse-1']==$_SESSION['question1']){
+                echo "bien joué";
+                $score++;
             }
-        }   
-         
+            else{
+                echo "raté";
+             }
+            
+            echo '<h3>Question 2 : </h3>';
+            if ($_POST['reponse2']==$_SESSION['question2']){
+                echo "bien joué";
+                $score++;
+            }
+            else{
+                echo "raté";
+            }
+            echo "<p>votre score est de : " . $score . " sur 5</p>";
+            
+        }
+
         ?>
 
     </main>
