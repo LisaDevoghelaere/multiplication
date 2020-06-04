@@ -1,3 +1,4 @@
+<?php session_start(); //pour que les *_SESSION marchent. le $_SESSION permet de terenir des infos ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,5 +24,37 @@
         </nav>
     </header>
     <!--Super Mode révision : Poser une série de 5 questions puis afficher le score -->
+    <main>
+        <h2>Super Mode Révision !</h2>
+        <p>Répond à 5 questions tirées au hasard ! C'est parti ?</p>
+        <?php
+        for ($question = 1; $question <= 5; $question++)
+        {
+            echo '<h3>Question : ' . $question . "</h3><br>";
+            $_SESSION['number1'] = random_int(1,10);
+            $_SESSION['number2'] = random_int(1,10);
+            echo $_SESSION['number1'] . " X " . $_SESSION['number2'] . " = " . '<form action="" method="post"><input type="text" name="reponse"> '. ' <input type="submit" value="valider"></form>';
+            var_dump($_SESSION['number1']*$_SESSION['number2']);
+        
+            if(isset($_POST['reponse'])){
+               
+                $resultat=$_SESSION['number1']*$_SESSION['number2'];
+                if ($_POST["reponse"]==$resultat){
+                
+                ?>
+                        <p>Bravo! Tu as trouvé!</p>
+                    <?php
+                    }
+                else{
+                    ?>
+                        <p>Mauvaise Réponse!</p>
+                    <?php
+                    }
+            }
+        }   
+         
+        ?>
+
+    </main>
 </body>
 </html>

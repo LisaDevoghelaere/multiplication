@@ -55,16 +55,15 @@
         
         ?>
         <form action="" method="post">
-            <input type="hidden" name="choix" value="<?php echo $_SESSION['multiplicande'] ?>"> <!--Ici on mets un input caché qui se souvient de la valeur du précédent formulaire -->
+        
             <input type="text" name="reponse"> <!-- réponse utilisateur-->
             <input type="submit" value="valider">
         </form>
         <?php
-         
+        }
             if(isset($_POST['reponse'])){
                 
                 $resultat=$_SESSION['multiplicande']*$_SESSION['random-num'];
-                var_dump($resultat);
                 if ($_POST["reponse"]==$resultat){
                 ?>
                         <p>Bravo! Tu as trouvé!</p>
@@ -76,7 +75,7 @@
                     <?php
                     }
             }
-        }      
+              
         ?>
     </main>
 </body>
