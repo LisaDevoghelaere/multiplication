@@ -27,8 +27,10 @@
     
     En cas de doute utiliser var_dump pour écouter les variables et savoir ce qu'elles contiennent (un peu comme console.log)-->
     <main>
-        <h2>Choisis une table à réviser</h2>
-        <p>Sélectionne le chiffre de la table que tu veux réviser et trouve la réponse à la multiplication qui va apparaitre</p>
+        <header>
+            <h2 class="titre-page">Choisis une table à réviser</h2>
+            <p>Sélectionne le chiffre de la table que tu veux réviser et trouve la réponse à la multiplication qui va apparaitre</p>
+        </header>
         <form method="post" name="table_de_multiplication" action="">
             <select name="choix">
                 <option value="0">0</option>
@@ -49,7 +51,7 @@
         <?php
        
         if(isset($_POST['choix'])){ //lis les formulaires
-            $_SESSION['multiplicande'] = $_POST['choix']; //récupération du choix du formulaire pur en faire le multiplicande
+            $_SESSION['multiplicande'] = $_POST['choix']; //récupération du choix du formulaire pour en faire le multiplicande
             $_SESSION['random-num']=random_int(0,10); // random pour avoir un multiplicateur
             echo $_SESSION['multiplicande'] . " x " . $_SESSION['random-num'] . " = " . "?"; //question
         

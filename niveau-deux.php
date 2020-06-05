@@ -24,7 +24,7 @@
 </header>
 <main>
 <header>
-    <h2>Quelle table veux-tu réviser ?</h2>
+    <h2 class="titre-page">Quelle table veux-tu réviser ?</h2>
 </header>
     <form method="post" name="table_de_multiplication" action="">
         <select name="multiplication">

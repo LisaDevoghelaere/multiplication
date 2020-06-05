@@ -22,35 +22,40 @@
             </ul>
         </nav>
     </header>
-    <!--checkbox - Le choix de la ou des table(s) de multiplication à afficher se fait par checkboxes et par un bouton "valider". La ou les table(s) de multiplication sélectionée(s) s'affiche(nt) en dessous.-->
-    <form method="POST" action="">
-        <input type="checkbox" name="chiffre[]" value="1"> Table de 1<br>
-        <input type="checkbox" name="chiffre[]" value="2"> Table de 2<br>
-        <input type="checkbox" name="chiffre[]" value="3"> Table de 3<br>
-        <input type="checkbox" name="chiffre[]" value="4"> Table de 4<br>
-        <input type="checkbox" name="chiffre[]" value="5"> Table de 5<br>
-        <input type="checkbox" name="chiffre[]" value="6"> Table de 6<br>
-        <input type="checkbox" name="chiffre[]" value="7"> Table de 7<br>
-        <input type="checkbox" name="chiffre[]" value="8"> Table de 8<br>
-        <input type="checkbox" name="chiffre[]" value="9"> Table de 9<br>
-        <input type="checkbox" name="chiffre[]" value="10"> Table de 10<br>
-        <input type="submit" name="bouton" value="Afficher">
-    </form>
-    <?php
-    if(isset($_POST["chiffre"])){
-        for($i=0; $i < count($_POST["chiffre"]);$i++){?>
-            <div>
-                <h3>Table de <?php echo$_POST["chiffre"][$i]; ?></h3>
-                <p><?php
-            for ($j=0; $j<11; $j++){
-                echo$_POST["chiffre"][$i] . "x" .$j. " = ". ($_POST["chiffre"][$i]*$j). "<br/>";
+    <main>
+        <header>
+            <h2 class="titre-page">Révises plusieurs tables d'un coup</h2>
+            <p>Ici tu peux afficher une ou plusieurs tables pour pouvoir réviser avec</p>
+        </header>
+        <form method="POST" action="">
+            <input type="checkbox" name="chiffre[]" value="1"> Table de 1<br>
+            <input type="checkbox" name="chiffre[]" value="2"> Table de 2<br>
+            <input type="checkbox" name="chiffre[]" value="3"> Table de 3<br>
+            <input type="checkbox" name="chiffre[]" value="4"> Table de 4<br>
+            <input type="checkbox" name="chiffre[]" value="5"> Table de 5<br>
+            <input type="checkbox" name="chiffre[]" value="6"> Table de 6<br>
+            <input type="checkbox" name="chiffre[]" value="7"> Table de 7<br>
+            <input type="checkbox" name="chiffre[]" value="8"> Table de 8<br>
+            <input type="checkbox" name="chiffre[]" value="9"> Table de 9<br>
+            <input type="checkbox" name="chiffre[]" value="10"> Table de 10<br>
+            <input type="submit" name="bouton" value="Afficher">
+        </form>
+        <?php
+        if(isset($_POST["chiffre"])){
+            for($i=0; $i < count($_POST["chiffre"]);$i++){?>
+                <div>
+                    <h3>Table de <?php echo$_POST["chiffre"][$i]; ?></h3>
+                    <p><?php
+                for ($j=0; $j<11; $j++){
+                    echo$_POST["chiffre"][$i] . "x" .$j. " = ". ($_POST["chiffre"][$i]*$j). "<br/>";
+                }
+                ?></p>
+                </div> 
+                <?php
             }
-            ?></p>
-            </div> 
-            <?php
         }
-    }
-        
-    ?>    
+            
+        ?>    
+    </main>
 </body>
 </html>

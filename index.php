@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Multiplication</h1>
+        <h1 class="multiplication">Multiplication</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
@@ -24,20 +24,23 @@
     </header>
     <main>
         <div>
-            <h2>Révisons un peu nos tables de multiplication !</h2>
+            <h2 class="titre-page">Révisons un peu nos tables de multiplication !</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
         </div>
         <div>
-            <p>
-                <?php
-                $trois=3;
-                Echo 'Table de multiplication de 3<br>';
-                for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-                {
-                    echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
-                }    
-                ?>
-            </p>
+            <div class="bg-y-arrow"></div>
+            <div class="table-de-multiplication">
+                
+                    <?php
+                    $trois=3;
+                    Echo '<h3>Table de 3</h3><p>';
+                    for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                    {
+                        echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
+                    }    
+                    ?>
+                </p>
+            </div>
         </div>
     </main>
 </body>
