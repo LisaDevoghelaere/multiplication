@@ -49,13 +49,11 @@
                 for ($j=0; $j<11; $j++){
                     echo$_POST["chiffre"][$i] . "x" .$j. " = ". ($_POST["chiffre"][$i]*$j). "<br/>";
                 }
-                ?></p>
-                </div> 
-                <?php
+                
             }
-        }
-            
-        ?>    
+        }    
+        ?> </p>
+        </div>    
     </main>
 </body>
 </html>
