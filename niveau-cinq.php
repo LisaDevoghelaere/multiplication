@@ -23,7 +23,7 @@
         </nav>
     </header>
     <!--Super Mode révision : Poser une série de 5 questions puis afficher le score -->
-    <main>
+    <main class="container">
         <h2>Super Mode Révision !</h2>
         <p>Répond à 5 questions tirées au hasard ! C'est parti ?</p>
         <form action="" method="post">
@@ -49,8 +49,6 @@
                 echo "votre score $score /5";
             }
         ?>
-        
-
  </form>
     </main>
 </body>

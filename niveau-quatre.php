@@ -26,7 +26,7 @@
     <!--mode révision : l'utilisateur choisit une table de multiplication et doit répondre à une multiplication tirée au hasard dans la table sélectionnée. 
     
     En cas de doute utiliser var_dump pour écouter les variables et savoir ce qu'elles contiennent (un peu comme console.log)-->
-    <main>
+    <main class="container">
         <header>
             <h2 class="titre-page">Choisis une table à réviser</h2>
             <p>Sélectionne le chiffre de la table que tu veux réviser et trouve la réponse à la multiplication qui va apparaitre</p>

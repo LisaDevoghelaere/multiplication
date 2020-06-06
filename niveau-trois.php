@@ -22,7 +22,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <header>
             <h2 class="titre-page">Révises plusieurs tables d'un coup</h2>
             <p>Ici tu peux afficher une ou plusieurs tables pour pouvoir réviser avec</p>

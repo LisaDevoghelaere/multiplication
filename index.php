@@ -22,23 +22,27 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div>
-            <h2 class="titre-page">Révisons un peu nos tables de multiplication !</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
-        </div>
-        <div>
-            <div class="bg-y-arrow"></div>
-            <div class="table-de-trois">                
-                    <?php
-                    $trois=3;
-                    Echo '<h3>Table de 3</h3><p>';
-                    for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-                    {
-                        echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
-                    }    
-                    ?>
-                </p>
+    <main class="container">
+        <div class="partage">
+            <header>
+                <h2 class="titre-page">Révisons un peu nos tables de multiplication !</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
+            </header>
+            <div>
+                <div class="bg-y-arrow"></div>
+                <div class="table-de-trois">                
+                       <a href="niveau-deux.php">
+                            <?php
+                            $trois=3;
+                            Echo '<h3>Table de 3</h3><p>';
+                            for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                            {
+                                echo $trois.' x '.$multiplicateur.' = '.$trois*$multiplicateur.'<br>';
+                            }    
+                            ?>
+                       </a>
+                    </p>
+                </div>
             </div>
         </div>
     </main>

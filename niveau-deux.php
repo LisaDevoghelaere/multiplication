@@ -22,39 +22,41 @@
         </ul>
     </nav>
 </header>
-<main>
-<header>
-    <h2 class="titre-page">Quelle table veux-tu réviser ?</h2>
-</header>
-    <form method="post" name="table_de_multiplication" action="">
-        <select name="multiplication">
-            <option value="0">--Choisis un chiffre--</option>
-            <option value="1">Table de 1</option>
-            <option value="2">Table de 2</option>
-            <option value="3">Table de 3</option>
-            <option value="4">Table de 4</option>
-            <option value="5">Table de 5</option>
-            <option value="6">Table de 6</option>
-            <option value="7">Table de 7</option>
-            <option value="8">Table de 8</option>
-            <option value="9">Table de 9</option>
-            <option value="10">Table de 10</option>
-        </select>
-        <input type="submit" name="valider" value="OK"/>
-    </form>
-    <div>
-        <p>
-            <?php
-            if(isset($_POST['multiplication'])){
-                $multiplicande=$_POST['multiplication'];
-                    for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
-                    {
-                        echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
+<main class="container">
+<div class="window-box">
+    <header>
+        <h2 class="titre-page">Quelle table veux-tu réviser ?</h2>
+    </header>
+        <form method="post" name="table_de_multiplication" action="">
+            <select name="multiplication">
+                <option value="0">--Choisis un chiffre--</option>
+                <option value="1">Table de 1</option>
+                <option value="2">Table de 2</option>
+                <option value="3">Table de 3</option>
+                <option value="4">Table de 4</option>
+                <option value="5">Table de 5</option>
+                <option value="6">Table de 6</option>
+                <option value="7">Table de 7</option>
+                <option value="8">Table de 8</option>
+                <option value="9">Table de 9</option>
+                <option value="10">Table de 10</option>
+            </select>
+            <input type="submit" name="valider" value="OK"/>
+        </form>
+        <div>
+            <p>
+                <?php
+                if(isset($_POST['multiplication'])){
+                    $multiplicande=$_POST['multiplication'];
+                        for ($multiplicateur = 1; $multiplicateur <= 10; $multiplicateur++)
+                        {
+                            echo $multiplicande.' x '.$multiplicateur.' = '.$multiplicande*$multiplicateur.'<br>';
+                        }
                     }
-                }
-            ?>
-        </p>
-    </div>
+                ?>
+            </p>
+        </div>
+</div>
 </main>
 </body>
 </html>
