@@ -12,6 +12,11 @@ body
     color: var(--powder-blue);  
     margin : 0 auto; 
 }
+.container
+{
+    max-width: 1280px;
+    margin : 0 auto;
+}
 h1
 {
     font-family: var(--titres); 
@@ -24,22 +29,6 @@ h1
     font-family: var(--titres);
     font-size: var(--size32);
     color :var(--powder-blue);
-}
-%box-multiplication
-{
-    text-align: center;
-    color :var(--powder-blue);
-    background-color: var(--metallic-seaweed);
-    box-shadow: 14px 15px 11px -6px rgba(1,39,43,0.52)
-}
-.table-de-trois
-{
-    @extend%box-multiplication;
-    padding : 1rem;
-    width : 15rem;
-    height : auto;
-    border-radius: 15%;
-    margin-left: 20%;
 }
 ul
 {
@@ -60,10 +49,7 @@ ul
                 color : var(--vivid-tangerine);
             }
     }    
-}
-
-
-    
+}   
 }
 .barrenav
 {
@@ -72,10 +58,58 @@ ul
     align-content: center;
     border-bottom: 3px solid var(--miel-epice);
 }
-
-.bg-y-arrow
+%box-multiplication
 {
-    width: 400px;
-    height : 200px;
-    background-image: url(media/y-arrow.svg);
+    text-align: center;
+    color :var(--powder-blue);
+    background-color: var(--metallic-seaweed);
+    box-shadow: 14px 15px 11px -6px rgba(1,39,43,0.52)
+}
+/*-------------------------------Niveau 1-----------------------------*/
+.table-de-trois
+{
+    @extend%box-multiplication;
+    width : 15rem;
+    height : auto;
+    margin-left: 20%;
+    border-radius : 15%;
+    padding : 1rem;
+    a{
+        text-decoration: none;
+        color : var(--powder-blue);
+    }
+    position: absolute;
+    top : 60%; right : 10%;
+}
+.partage
+{
+    display : flex;
+    justify-content: space-between;
+    align-content: center;
+    header
+    {
+        max-width: 45%;
+    }
+    div
+    {
+        position: relative;
+        .bg-y-arrow
+        {
+            width: 400px;
+            height : 200px;
+            background-image: url(media/y-arrow.svg);
+            position: absolute;
+            right : 70%;
+        }
+    }
+}
+/*------------------------Niveau 2--------------------------*/
+.window-box
+{
+    @extend%box-multiplication;
+    width : 38rem;
+    margin : 3rem auto;
+    border-radius : 15px;
+    padding : 1rem;
+
 }
