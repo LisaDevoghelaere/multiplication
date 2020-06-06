@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Suez+One&display=swap" rel="stylesheet">
     <title>Multiplication</title>
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="multiplication">Multiplication</h1>
+    <header class="barrenav container">
+        <h1>Multiplication</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Accueil</a></li>
@@ -29,8 +29,7 @@
         </div>
         <div>
             <div class="bg-y-arrow"></div>
-            <div class="table-de-multiplication">
-                
+            <div class="table-de-trois">                
                     <?php
                     $trois=3;
                     Echo '<h3>Table de 3</h3><p>';
