@@ -1,0 +1,28 @@
+
+:root
+{
+    /*Couleurs*/
+    --eagle-green: #005059;
+    --metallic-seaweed : #08808E;
+    /*--middle-blue : #7AC9D0;   couleur en sursie*/
+    --powder-blue : #C8E8EA;
+    --vivid-tangerine : #FE9A84;
+    --miel-epice : #EFAE4F;
+    /*polices*/
+    --titres : 'Suez One', serif;  
+    --corps-de-txt : 'Roboto', sans-serif;
+    /*size*/
+    --size16 : 1rem;
+    --size20: 1.25rem;
+    --size24: 1.5rem;
+    --size32 : 2rem;
+    /*weight*/
+
+}
+/*--------------------- Mediaqueries------------------*/
+$desktop : "screen and (min-width : 992px)";
+/*@media screen and (min-width : 992px){}  <-9 pouces*/
+$tablette : "screen and (min-width: 480px) and (max-width : 991px)";
+/*@media screen and (min-width: 480px) and (max-width : 991px){}  <-tablette*/
+$smartphone : "screen and (max-width: 479px)";
+/*@media screen and (max-width: 479px){}smartphone*/
