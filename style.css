@@ -1,0 +1,110 @@
+/*    font-family: 'Roboto', sans-serif;
+font-family: 'Suez One', serif;
+    : rgb(110, 17, 33);
+    background-color: pink;*/
+:root {
+  /*Couleurs*/
+  --eagle-green: #005059;
+  --metallic-seaweed: #08808E;
+  /*--middle-blue : #7AC9D0;   couleur en sursie*/
+  --powder-blue: #C8E8EA;
+  --vivid-tangerine: #FE9A84;
+  --miel-epice: #EFAE4F;
+  /*polices*/
+  --titres: 'Suez One', serif;
+  --corps-de-txt: 'Roboto', sans-serif;
+  /*size*/
+  --size16: 1rem;
+  --size20: 1.25rem;
+  --size24: 1.5rem;
+  --size32: 2rem;
+  /*weight*/
+}
+
+/*--------------------- Mediaqueries------------------*/
+/*@media screen and (min-width : 992px){}  <-9 pouces*/
+/*@media screen and (min-width: 480px) and (max-width : 991px){}  <-tablette*/
+/*@media screen and (max-width: 479px){}smartphone*/
+body {
+  font-family: var(--corps-de-txt);
+  font-size: 1rem;
+  background-color: var(--eagle-green);
+  color: var(--powder-blue);
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--titres);
+  font-size: var(--size24);
+  color: var(--powder-blue);
+  padding: 1rem;
+}
+
+.titre-page {
+  font-family: var(--titres);
+  font-size: var(--size32);
+  color: var(--powder-blue);
+}
+
+.table-de-trois {
+  text-align: center;
+  color: var(--powder-blue);
+  background-color: var(--metallic-seaweed);
+  -webkit-box-shadow: 14px 15px 11px -6px rgba(1, 39, 43, 0.52);
+          box-shadow: 14px 15px 11px -6px rgba(1, 39, 43, 0.52);
+}
+
+.table-de-trois {
+  padding: 1rem;
+  width: 15rem;
+  height: auto;
+  border-radius: 15%;
+  margin-left: 20%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+ul li {
+  padding: 1rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--powder-blue);
+  font-weight: 900;
+  font-size: var(--size20);
+}
+
+ul li a:hover {
+  color: var(--vivid-tangerine);
+}
+
+.barrenav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-bottom: 3px solid var(--miel-epice);
+}
+
+.bg-y-arrow {
+  width: 400px;
+  height: 200px;
+  background-image: url(media/y-arrow.svg);
+}
+/*# sourceMappingURL=style.css.map */
