@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="barrenav container">
-        <h1>Multiplication</h1>
+    <header class="container flex-head">
+        <h1><a href="index.php">Multiplication</a></h1>
         <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="niveau-deux.php">Niveau 2</a></li>
-                <li><a href="niveau-trois.php">Niveau 3</a></li>
-                <li><a href="niveau-quatre.php">Niveau 4</a></li>
-                <li><a href="niveau-cinq.php">Niveau 5</a></li>
-                <li><a href="niveau-six.php">Niveau 6</a></li>
-                <li><a href="niveau-quatre-bis.php">Niveau 4 Bis</a></li>
-            </ul>
-        </nav>
+            <ul class="nav-links">
+                <li class="resp-disappear"><a href="niveau-deux.php">Niveau 2</a></li>
+                <li class="resp-disappear"><a href="niveau-trois.php">Niveau 3</a></li>
+                <li class="resp-disappear"><a href="niveau-quatre.php">Niveau 4</a></li>
+                <li class="resp-disappear"><a href="niveau-cinq.php">Niveau 5</a></li>
+                <li class="resp-disappear"><a href="niveau-six.php">Niveau 6</a></li>
+                <li class="resp-disappear"><a href="niveau-quatre-bis.php">Niveau 4 Bis</a></li>
+            </ul> 
+            <p class="padding-right"><div class="burger"><span></span></div></p>    
+        </nav> 
     </header>
     <main class="container">
         <div class="partage">
             <header>
                 <h2 class="titre-page">Révisons un peu nos tables de multiplication !</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
+                <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quos iste consectetur beatae quis cum obcaecati quo, molestiae repellat aliquam, nobis recusandae eligendi, nesciunt nam optio laudantium amet minima. Voluptates!</p>
             </header>
             <div>
-                <div class="bg-y-arrow"></div>
+                <div class="bg-y-arrow "></div>
                 <div class="table-de-trois">                
                        <a href="niveau-deux.php">
                             <?php
@@ -46,5 +46,6 @@
             </div>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
